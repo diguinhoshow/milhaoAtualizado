@@ -147,11 +147,11 @@
 
 								<select name="alternativaCorreta1" class="form-control">
 									<option value="">Selecione a alternativa correta</option>
-									<option value="alternativaCorreta11">Alternativa 1</option>
-									<option value="alternativaCorreta21">Alternativa 2</option>
-									<option value="alternativaCorreta31">Alternativa 3</option>
-									<option value="alternativaCorreta41">Alternativa 4</option>
-									<option value="alternativaCorreta51">Alternativa 5</option>
+									<option value="0">Alternativa 1</option>
+									<option value="1">Alternativa 2</option>
+									<option value="2">Alternativa 3</option>
+									<option value="3">Alternativa 4</option>
+									<option value="4">Alternativa 5</option>
 								</select>
 							</div>
 								<!--Fim Questão 1 
@@ -168,11 +168,11 @@
 
 								<select name="alternativaCorreta2" class="form-control">
 									<option value="">Selecione a alternativa correta</option>
-									<option value="alternativaCorreta12">Alternativa 1</option>
-									<option value="alternativaCorreta22">Alternativa 2</option>
-									<option value="alternativaCorreta32">Alternativa 3</option>
-									<option value="alternativaCorreta42">Alternativa 4</option>
-									<option value="alternativaCorreta52">Alternativa 5</option>
+									<option value="0">Alternativa 1</option>
+									<option value="1">Alternativa 2</option>
+									<option value="2">Alternativa 3</option>
+									<option value="3">Alternativa 4</option>
+									<option value="4">Alternativa 5</option>
 								</select>
 							</div>
 
@@ -190,11 +190,11 @@
 
 								<select name="alternativaCorreta3" class="form-control">
 									<option value="">Selecione a alternativa correta</option>
-									<option value="alternativaCorreta12">Alternativa 1</option>
-									<option value="alternativaCorreta22">Alternativa 2</option>
-									<option value="alternativaCorreta32">Alternativa 3</option>
-									<option value="alternativaCorreta42">Alternativa 4</option>
-									<option value="alternativaCorreta52">Alternativa 5</option>
+									<option value="0">Alternativa 1</option>
+									<option value="1">Alternativa 2</option>
+									<option value="2">Alternativa 3</option>
+									<option value="3">Alternativa 4</option>
+									<option value="4">Alternativa 5</option>
 								</select>
 							</div>
 
@@ -211,12 +211,12 @@
 								<input type="text" name="alternativa54" class="form-control" placeholder="Alternativa 5" required=""><br>
 
 								<select name="alternativaCorreta4" class="form-control">
-									<option value="">Selecione a alternativa correta</option>
-									<option value="alternativaCorreta14">Alternativa 1</option>
-									<option value="alternativaCorreta24">Alternativa 2</option>
-									<option value="alternativaCorreta34">Alternativa 3</option>
-									<option value="alternativaCorreta44">Alternativa 4</option>
-									<option value="alternativaCorreta54">Alternativa 5</option>
+								<option value="">Selecione a alternativa correta</option>
+									<option value="0">Alternativa 1</option>
+									<option value="1">Alternativa 2</option>
+									<option value="2">Alternativa 3</option>
+									<option value="3">Alternativa 4</option>
+									<option value="4">Alternativa 5</option>
 								</select>
 							</div>	
 
@@ -233,12 +233,12 @@
 								<input type="text" name="alternativa55" class="form-control" placeholder="Alternativa 5" required=""><br>
 
 								<select name="alternativaCorreta5" class="form-control">
-									<option value="">Selecione a alternativa correta</option>
-									<option value="alternativaCorreta15">Alternativa 1</option>
-									<option value="alternativaCorreta25">Alternativa 2</option>
-									<option value="alternativaCorreta35">Alternativa 3</option>
-									<option value="alternativaCorreta45">Alternativa 4</option>
-									<option value="alternativaCorreta55">Alternativa 5</option>
+								<option value="">Selecione a alternativa correta</option>
+									<option value="0">Alternativa 1</option>
+									<option value="1">Alternativa 2</option>
+									<option value="2">Alternativa 3</option>
+									<option value="3">Alternativa 4</option>
+									<option value="4">Alternativa 5</option>
 								</select>
 							</div>		
 								<!--Fim Questão 5 
@@ -254,12 +254,12 @@
 								<input type="text" name="alternativa56" class="form-control" placeholder="Alternativa 5" required=""><br>
 
 								<select name="alternativaCorreta6" class="form-control">
-									<option value="">Selecione a alternativa correta</option>
-									<option value="alternativaCorreta16">Alternativa 1</option>
-									<option value="alternativaCorreta26">Alternativa 2</option>
-									<option value="alternativaCorreta36">Alternativa 3</option>
-									<option value="alternativaCorreta46">Alternativa 4</option>
-									<option value="alternativaCorreta56">Alternativa 5</option>
+								<option value="">Selecione a alternativa correta</option>
+									<option value="0">Alternativa 1</option>
+									<option value="1">Alternativa 2</option>
+									<option value="2">Alternativa 3</option>
+									<option value="3">Alternativa 4</option>
+									<option value="4">Alternativa 5</option>
 								</select>
 							</div>
 
@@ -276,12 +276,12 @@
 								<input type="text" name="alternativa57" class="form-control" placeholder="Alternativa 5" required=""><br>
 
 								<select name="alternativaCorreta7" class="form-control">
-									<option value="">Selecione a alternativa correta</option>
-									<option value="alternativaCorreta17">Alternativa 1</option>
-									<option value="alternativaCorreta27">Alternativa 2</option>
-									<option value="alternativaCorreta37">Alternativa 3</option>
-									<option value="alternativaCorreta47">Alternativa 4</option>
-									<option value="alternativaCorreta57">Alternativa 5</option>
+								<option value="">Selecione a alternativa correta</option>
+									<option value="0">Alternativa 1</option>
+									<option value="1">Alternativa 2</option>
+									<option value="2">Alternativa 3</option>
+									<option value="3">Alternativa 4</option>
+									<option value="4">Alternativa 5</option>
 								</select>
 							</div>	
 
@@ -298,12 +298,12 @@
 								<input type="text" name="alternativa58" class="form-control" placeholder="Alternativa 5" required=""><br>
 
 								<select name="alternativaCorreta8" class="form-control">
-									<option value="">Selecione a alternativa correta</option>
-									<option value="alternativaCorreta18">Alternativa 1</option>
-									<option value="alternativaCorreta28">Alternativa 2</option>
-									<option value="alternativaCorreta38">Alternativa 3</option>
-									<option value="alternativaCorreta48">Alternativa 4</option>
-									<option value="alternativaCorreta58">Alternativa 5</option>
+								<option value="">Selecione a alternativa correta</option>
+									<option value="0">Alternativa 1</option>
+									<option value="1">Alternativa 2</option>
+									<option value="2">Alternativa 3</option>
+									<option value="3">Alternativa 4</option>
+									<option value="4">Alternativa 5</option>
 								</select>
 							</div>	
 
@@ -320,12 +320,12 @@
 								<input type="text" name="alternativa59" class="form-control" placeholder="Alternativa 5" required=""><br>
 
 								<select name="alternativaCorreta9" class="form-control">
-									<option value="">Selecione a alternativa correta</option>
-									<option value="alternativaCorreta19">Alternativa 1</option>
-									<option value="alternativaCorreta29">Alternativa 2</option>
-									<option value="alternativaCorreta39">Alternativa 3</option>
-									<option value="alternativaCorreta49">Alternativa 4</option>
-									<option value="alternativaCorreta59">Alternativa 5</option>
+								<option value="">Selecione a alternativa correta</option>
+									<option value="0">Alternativa 1</option>
+									<option value="1">Alternativa 2</option>
+									<option value="2">Alternativa 3</option>
+									<option value="3">Alternativa 4</option>
+									<option value="4">Alternativa 5</option>
 								</select>
 							</div>
 
@@ -342,12 +342,12 @@
 								<input type="text" name="alternativa50" class="form-control" placeholder="Alternativa 5" required=""><br>
 
 								<select name="alternativaCorreta0" class="form-control">
-									<option value="">Selecione a alternativa correta</option>
-									<option value="alternativaCorreta10">Alternativa 1</option>
-									<option value="alternativaCorreta20">Alternativa 2</option>
-									<option value="alternativaCorreta30">Alternativa 3</option>
-									<option value="alternativaCorreta40">Alternativa 4</option>
-									<option value="alternativaCorreta50">Alternativa 5</option>
+								<option value="">Selecione a alternativa correta</option>
+									<option value="0">Alternativa 1</option>
+									<option value="1">Alternativa 2</option>
+									<option value="2">Alternativa 3</option>
+									<option value="3">Alternativa 4</option>
+									<option value="4">Alternativa 5</option>
 								</select>
 							</div>	
 

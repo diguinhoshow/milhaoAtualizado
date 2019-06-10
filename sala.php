@@ -5,9 +5,12 @@ $nome = $_POST['nome'];
 $instituicao = $_POST['instituicao'];
 $codigo_acesso = $_POST['codigo_acesso'];
 
-$resultado = mysqli_query($conexao, "SELECT id, id_questionario, enuciado, assunto, alternativa1, alternativa2, alternativa3, alternativa4, alternativa5 FROM
+
+$resultado = mysqli_query($conexao, "SELECT id, id_questionario, enuciado, assunto, alternativa1, alternativa2, alternativa3, alternativa4, alternativa5, alternativaCorreta FROM
 	questao WHERE codigo = '$codigo_acesso'");
 $linhas = mysqli_num_rows($resultado);
+
+$cont = 1;
 ?>
 
 <!DOCTYPE html>
@@ -100,8 +103,8 @@ $linhas = mysqli_num_rows($resultado);
             <table id="table-<?=$linhas['id']?>" class="table table-borderless" style="width: 100%">
                 <thead>
                 <tr>
-                    <th scope="col" style="text-align: center;">Questão</th>
-                    <th scope="col" style="text-align: center;">Resposta</th>
+                    <th scope="col" style="text-align: center;">Questão <?php echo $cont++ ?></th>
+                    <th scope="col" style="text-align: center;">Resposta </th>
                 </tr>
                 </thead>
 
@@ -110,24 +113,24 @@ $linhas = mysqli_num_rows($resultado);
                     <td><?php echo$linhas['enuciado']; ?> </td>
                 </tr>
                 <tr>
-                    <td>A- <?php echo$linhas['alternativa1'];?> </td>
-                    <td><input type="number" name="alter1" min="0" max="5" value="0" onblur="calcular('<?=$linhas['id']?>')"></td>
+                    <td>A- <?php echo $linhas['alternativa1'];?> </td>
+                    <td><input type="number" name="0" min="0" max="5" value="0" onkeyup="calcular('<?=$linhas['id']?>', '<?=$linhas['alternativaCorreta']?>', '<?=$linhas['alternativaCorreta']?>')"></td>
                 </tr>
                 <tr>
                     <td>B- <?php echo$linhas['alternativa2']; ?></td>
-                    <td><input type="number" name="alter2" min="0" max="5" value="0" onblur="calcular('<?=$linhas['id']?>')"></td>
+                    <td><input type="number" name="1" min="0" max="5" value="0" onkeyup="calcular('<?=$linhas['id']?>', '<?=$linhas['alternativaCorreta']?>')"></td>
                 </tr>
                 <tr>
                     <td>C- <?php echo$linhas['alternativa3']; ?></td>
-                    <td><input type="number" name="alter3" min="0" max="5" value="0" onblur="calcular('<?=$linhas['id']?>')"></td>
+                    <td><input type="number" name="2" min="0" max="5" value="0" onkeyup="calcular('<?=$linhas['id']?>', '<?=$linhas['alternativaCorreta']?>')"></td>
                 </tr>
                 <tr>
                     <td>D- <?php echo$linhas['alternativa4']; ?></td>
-                    <td><input type="number" name="alter4" min="0" max="5" value="0" onblur="calcular('<?=$linhas['id']?>')"></td>
+                    <td><input type="number" name="3" min="0" max="5" value="0" onkeyup="calcular('<?=$linhas['id']?>', '<?=$linhas['alternativaCorreta']?>')"></td>
                 </tr>
                 <tr>
                     <td>E- <?php echo$linhas['alternativa5']; ?></td>
-                    <td><input type="number" name="alter5" min="0" max="5" value="0" onblur="calcular('<?=$linhas['id']?>')"></td>
+                    <td><input type="number" name="4" min="0" max="5" value="0" onkeyup="calcular('<?=$linhas['id']?>', '<?=$linhas['alternativaCorreta']?>')"></td>
                 </tr>
                 <tr>
                     <td><span id="resultado-<?=$linhas['id']?>"></span></td>
@@ -143,29 +146,93 @@ $linhas = mysqli_num_rows($resultado);
             </table>
 
             <script>
+(()=> {
+    const contagem = 0;
+   
+              
+})()
 
-                function calcular(id) {
-                    let soma = 0;
-                    let table = document.getElementById('table-' + id);
-                    let inputs = table.getElementsByTagName('input');
-                    for (let z = 0; z < inputs.length; z++) {
-                        soma += parseInt(inputs[z].value);
-                    }
-                    let elemResult = document.getElementById("resultado-" + id);
-                    if (soma === 5) {
-                        elemResult.textContent = "O resultado é " + String(soma) + ".";
-                    }else{
-                        elemResult.innerText = "Total de pontos deve ser igual a CINCO  Total: " + String(soma) + ".";
-                    }
-                }
+function calcular(id, correta) {
 
-                function desativar(){
-                    var elemDesativar = document.getElementById("desativar");
+        
+
+let soma = 0;
+let table = document.getElementById('table-' + id);
+let inputs = table.getElementsByTagName('input');
 
 
-                    elemDesativar.textContent ="disa";
-                }
+let soma_total_acertos = 0;
 
+let positio_true = 3;
+
+for (let z = 0; z < inputs.length; z++) {
+
+    if(parseInt(inputs[z].name) ==  correta) {
+        console.log('a verdadeira é:', correta)
+        console.log('Valor opçãos',inputs[z].value )
+
+     
+        soma_total_acertos += parseInt(inputs[z].value);
+
+        contagem += soma_total_acertos
+
+
+    }
+
+    console.log('total_pontos', soma_total_acertos);
+
+
+    soma += parseInt(inputs[z].value);
+
+    if( parseInt(inputs[z].value) > 5) {
+       
+        inputs[z].value == 0
+        //  return;
+    }
+
+    if(soma > 5) {
+        soma -= parseInt(inputs[z].value);
+        alert('Quantidade de pontos ultrapassado!');
+        return;
+        inputs[z].value == 0;
+
+        
+    }
+
+    console.log('in', inputs[z].value)
+
+}
+
+console.log('Contagem', contagem);
+  
+
+
+
+
+
+if(soma > 5) {
+    alert('Saldo de pontos indisponivel')
+}
+
+let elemResult = document.getElementById("resultado-" + id);
+if (soma === 5) {
+    elemResult.textContent = "O resultado é " + String(soma) + ".";
+}else{
+    elemResult.innerText = "Total de pontos deve ser igual a CINCO  Total: " + String(soma) + ".";
+}
+}
+
+function desativar(){
+var elemDesativar = document.getElementById("desativar");
+
+
+elemDesativar.textContent ="disa";
+};
+         
+
+                
+
+                
             </script>
 
         <?php } ?>

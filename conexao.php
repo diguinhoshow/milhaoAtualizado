@@ -4,5 +4,5 @@
     $senha = "";
     $banco = "jogoummilhaonamesa";
 
-    $conexao = mysqli_connect('localhost', 'root', '', 'jogoummilhaonamesa') or die("Erro na conexão");
+    $conexao = mysqli_connect('localhost', 'root', 'senha_da_nasa', 'jogoummilhaonamesa') or die("Erro na conexão");
 ?>

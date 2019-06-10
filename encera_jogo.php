@@ -13,11 +13,11 @@ if (mysqli_affected_rows($conexao) != 0 ){
   <script type=\"text/javascript\">
   alert(\"Jogo finalizado com Sucesso.\");
   </script>
-  <META HTTP-EQUIV=REFRESH CONTENT = '0;URL=http://localhost/PROJETOS/milhaoAtualizado/paineldocente.php'>
+  <META HTTP-EQUIV=REFRESH CONTENT = '0;URL=painelDocente.php'>
   ";       
 }else{  
   echo "
-  <META HTTP-EQUIV=REFRESH CONTENT = '0;URL=http://localhost/PROJETOSmilhaoAtualizado/cadastroQuestionario.php'>
+  <META HTTP-EQUIV=REFRESH CONTENT = '0;URL=cadastroQuestionario.php'>
   <script type=\"text/javascript\">
   alert(\"Houve um erro ao finalizar jogo.\");
   </script>

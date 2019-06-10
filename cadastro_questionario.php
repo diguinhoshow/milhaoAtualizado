@@ -153,11 +153,11 @@ $resultado12 = mysqli_query ($conexao, "INSERT INTO questao (id_questionario, en
         <script type=\"text/javascript\">
           alert(\"Questionário cadastrado com Sucesso.\");
         </script>
-        <META HTTP-EQUIV=REFRESH CONTENT = '0;URL=http://localhost/PROJETOS/milhaoAtualizado/paineldocente.php'>
+        <META HTTP-EQUIV=REFRESH CONTENT = '0;URL=painelDocente.php'>
       ";       
     }else{  
         echo "
-        <META HTTP-EQUIV=REFRESH CONTENT = '0;URL=http://localhost/PROJETOS/milhaoAtualizado/cadastroQuestionario.php'>
+        <META HTTP-EQUIV=REFRESH CONTENT = '0;URL=cadastroQuestionario.php'>
         <script type=\"text/javascript\">
           alert(\"Houve um erro ao cadastrar.\");
         </script>

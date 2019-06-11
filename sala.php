@@ -133,28 +133,29 @@ $cont = 1;
                     <td><input type="number" name="4" min="0" max="5" value="0" onkeyup="calcular('<?=$linhas['id']?>', '<?=$linhas['alternativaCorreta']?>')"></td>
                 </tr>
                 <tr>
-                    <td><span id="resultado-<?=$linhas['id']?>"></span></td>
+                    <td><span id="resultado-<?=$linhas['id']?>"></span> <input type="hidden" class="results" id="res-<?=$linhas['id']?>" name="custId" value=""> </td>
                     <td><a href="#" ><span id="resultado2-<?=$linhas['id']?>" onclick="desativar()"></span></a></td>
                     <!-- "
                     <form name='result'>
                         <td><input type="button" name="" class="btn btn-success" style="margin-left: 70%" ></td>
                     </form>
                     <td><input type="button" name="teste" disabled="active"> Teste input </td> -->
+
+                    
                 </tr>
                 </tbody>
-
+               
             </table>
+<script  src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+<script>
 
-            <script>
-(()=> {
-    const contagem = 0;
-   
-              
-})()
+$(document).ready(function() {
+    console.log("ready!");
+});
+
+
 
 function calcular(id, correta) {
-
-        
 
 let soma = 0;
 let table = document.getElementById('table-' + id);
@@ -174,12 +175,12 @@ for (let z = 0; z < inputs.length; z++) {
      
         soma_total_acertos += parseInt(inputs[z].value);
 
-        contagem += soma_total_acertos
+        
 
 
     }
 
-    console.log('total_pontos', soma_total_acertos);
+   
 
 
     soma += parseInt(inputs[z].value);
@@ -199,11 +200,12 @@ for (let z = 0; z < inputs.length; z++) {
         
     }
 
-    console.log('in', inputs[z].value)
+   
+
+   
 
 }
 
-console.log('Contagem', contagem);
   
 
 
@@ -217,12 +219,48 @@ if(soma > 5) {
 let elemResult = document.getElementById("resultado-" + id);
 if (soma === 5) {
     elemResult.textContent = "O resultado é " + String(soma) + ".";
-}else{
+}else {
     elemResult.innerText = "Total de pontos deve ser igual a CINCO  Total: " + String(soma) + ".";
 }
+
+
+let eleMenteAcerto = document.getElementById("res-" + id);
+
+eleMenteAcerto.value = soma_total_acertos;
+
+console.log('acertos', eleMenteAcerto)
 }
 
+function  calculaResults(data)  {
+   let total = 0;
+
+    console.log('total acerto', total+=data)
+}
+function calcResultado() {
+   // let valor = 0;
+    // $(".results").each(function(index , element) {
+    //     //valor = valor+= parseInt(element.value)
+    //     console.log('Valor',element.value)
+
+    //     valor = element.value+=element.value;
+       
+    // });
+
+    // console.log('val', parseInt(valor));
+
+   var list =  $(".results");
+   var total = 0;
+  for(var i=0; i < list.length; i++) {
+      total = parseFloat(list[i].value+list[i].value)
+     
+
+  }
+  console.log('for', total)
+}
+
+
 function desativar(){
+let table = document.getElementById('s-' + id);
 var elemDesativar = document.getElementById("desativar");
 
 
@@ -236,7 +274,7 @@ elemDesativar.textContent ="disa";
             </script>
 
         <?php } ?>
-
+        <button type="button" onclick="calcResultado()" class="btn btn-success" style="margin-left: 70%" > Resultado </button>
     </div>
 </div>
 ?>
